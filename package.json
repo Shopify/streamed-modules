@@ -1,0 +1,36 @@
+{
+  "name": "streamed-modules-prototype",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Streamed ES module bundle execution: three builds of one app (baseline, inline-specifier polyfill, module-declarations) for a patched Chromium.",
+  "scripts": {
+    "gen": "node tools/gen-modules.mjs",
+    "build": "npm run build:baseline && npm run build:streamed && npm run build:declarations",
+    "build:baseline": "BUILD_MODE=baseline vite build --mode baseline",
+    "build:streamed": "BUILD_MODE=streamed vite build --mode streamed",
+    "build:declarations": "BUILD_MODE=declarations vite build --mode declarations",
+    "serve": "node tools/serve.mjs",
+    "measure": "node tools/measure.mjs",
+    "inspect": "node tools/inspect.mjs",
+    "listen": "node tools/listen.mjs",
+    "chain": "node tools/gen-chain-test.mjs",
+    "test": "node tests/run.mjs"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "echarts": "^5.5.1",
+    "highlight.js": "^11.10.0",
+    "lodash-es": "^4.17.21",
+    "marked": "^15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
+  }
+}
