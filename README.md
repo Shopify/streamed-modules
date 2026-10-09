@@ -345,3 +345,13 @@ Two things changed during the rebase beyond mechanical conflicts:
 * **Preload discovery.** The 2024 notes wanted `<link rel=preload as=fetch>` plus
   a loader that scans preloads. This loader just fetches, since the byte map is
   inlined in the HTML anyway.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Contributors sign Shopify's
+[CLA](https://cla.shopify.com/), and the project follows a
+[code of conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+MIT, see [LICENSE.md](LICENSE.md).
